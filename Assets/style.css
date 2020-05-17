@@ -1,0 +1,64 @@
+.weatherNav {
+    text-align: center;
+}
+
+.searchCol {
+background-color: lightgrey;
+height: 600px;
+margin-left: -100px;
+}
+
+.citydata{
+    height: 800px;
+}
+
+.cityNames {
+    margin-top: 40px;
+}
+
+.listItems {
+    width: 300px;
+    color: black;
+}
+
+.cityInfo {
+    height: 300px;
+    margin-top: 20px;
+}
+
+.futureWeather {
+    height: 266px;
+    margin-top: 15px;
+}
+
+.futureBox {
+    margin-left: 20px;
+}
+.blueBox {
+    padding: 10px;
+}
+
+.futureForecastBox {
+    width: 175px;
+    height: 150px;
+    background-color: #007bff;
+    text-align: center;
+    color: cornsilk;
+}
+
+#forecastIcon1 {
+    height: 40px;
+    width: 40px;
+}
+
+.low {
+background-color: green;
+}
+
+.medium {
+background-color: #FFD300;
+}
+
+.high {
+background-color: tomato;
+}

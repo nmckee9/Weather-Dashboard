@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+    <div class="nav navbar navbar-dark bg-dark">
+        <h1 class="navbar-text weatherNav">
+            Weather Dashboard
+        </h1>
+    </div>
+
+    <div class="div container">
+        <div class="div row">
+            <div class="div col-sm-4 searchCol">
+                <label for="search-bar" style="margin-left: 10px;">Search for a City</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="city, state" id="cityName"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary" id="button">Search</button>
+                    </div>
+                    <ul class="list-group cityNames listItems" id="prevSearch">
+                    </ul>
+                </div>
+            </div>
+            <div class="div col-sm-8">
+                <div class="card cityInfo" style="width: 800px;">
+                    <div class="card-body citydata">
+                        <h5 class="card-title" id="CityName"></h5>
+                        <img class="card-subtitle mb-2 text-muted" id="icon"><br>
+                        <h6 class="card-subtitle mb-2 text-muted" id="Temp">Temperature: </h6> <br>
+                        <h6 class="card-subtitle mb-2 text-muted" id="Humidity">Humidity: </h6> <br>
+                        <h6 class="card-subtitle mb-2 text-muted" id="Wind-Speed">Wind Speed: </h6> <br>
+                        <h6 class="card-subtitle mb-2 text-muted" >UV Index:
+                            <span id="UVIndex"></span> 
+                        </h6> <br>
+                        
+                    </div>
+                </div>
+                <div class="card cityInfo" style="width: 800px; height: 260px;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="">5 Day Forecast</h5> <br>
+                        <div class="div row futureBox">
+                            <div class="div col-sm-2">
+                                <div class="futureForecastBox" id="futureDay-1">
+                                    <p id="forecastDate1"></p>
+                                    <img id="forecastIcon1">
+                                    <p id="forecastTemp1">Temp: </p>
+                                    <p id="forecastHumidity1">Humidity: </p>
+                                </div>
+                            </div>
+                            <div class="div col-sm-2 bluebox">
+                                <div class="futureForecastBox" id="futureDay-2">
+                                    <p id="forecastDate2"></p>
+                                    <p id="forecastIcon2">Icon</p>
+                                    <p id="forecastTemp">Temp</p>
+                                    <p id="forecastHumidity">Humidity</p>
+                                </div>
+                            </div>
+                            <div class="div col-sm-2">
+                                <div class="futureForecastBox" id="futureDay-3">
+                                    <p id="forecastDate3"></p>
+                                    <img  id="forecastIcon">Icon
+                                    <p id="forecastTemp">Temp</p>
+                                    <p id="forecastHumidity">Humidity</p>
+                                </div>
+                            </div>
+                            <div class="div col-sm-2">
+                                <div class="futureForecastBox"id="futureDay-4">
+                                    <p id="forecastDate4"></p>
+                                    <p id="forecastIcon">Icon</p>
+                                    <p id="forecastTemp">Temp</p>
+                                    <p id="forecastHumidity">Humidity</p>
+                                </div>
+                            </div>
+                            <div class="div col-sm-2">
+                                <div class="futureForecastBox" id="futureDay-5">
+                                    <p id="forecastDate5"></p>
+                                    <p id="forecastIcon">Icon</p>
+                                    <p id="forecastTemp">Temp</p>
+                                    <p id="forecastHumidity">Humidity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- jQuery JS -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/moment.js"></script>
+            <script src="assets/script.js"></script>
+</body>
+
+</html>

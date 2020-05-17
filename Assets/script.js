@@ -1,0 +1,206 @@
+//local Storage
+//json link
+//not slim version of bootstrap so it includes ajax
+//on click events for search button
+//append ajax info to div for displaying weather info
+//if statements for UV index
+//get info for 5 day forecast and append info to future weather div 
+//need to display last city searched for in ul and prepend
+//so I'll need to take out cities listed as hard code and dynamically add via js
+
+var APIKey = "66a5b909d490ec3c9ab231a86676904b"
+
+// Event listener for all button elements
+$("button").on("click", function () {
+  event.preventDefault
+
+  // if (!cities.includes(cityName)) {
+  //   cities.push(cityName)
+  // }
+
+  var citySearched = $("#cityName").val();
+  var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearched + "&units=imperial&appid=" + APIKey;
+
+  // Performing our AJAX GET request
+  $.ajax({
+    url: queryURLCurrent,
+    method: "GET"
+  })
+    // After the data comes back from the API
+    .then(function (response) {
+      
+
+      // Log the queryURL
+      console.log(queryURLCurrent);
+
+      // Log the resulting object
+      console.log(response);
+
+      // Storing an array of results in the results variable
+      var results = response.data;
+
+      // Transfer content to HTML
+      var cityName = response.name;
+      var currentIcon = response.weather[0].icon;
+      var iconURL = "http://openweathermap.org/img/wn/" + currentIcon + "@2x.png"
+      var temperature = response.main.temp;
+      var humidity = response.main.humidity;
+      var windSpeed = response.wind.speed;
+      // var uvIndex = ""
+
+
+      // $("#CityName").text("Name: " + cityName);
+      console.log(cityName)
+      $("#CityName").append(cityName);
+
+        var Date = moment();
+        var currentDate = Date.format("L")
+        $("#CityName").append(" (" + currentDate + ")");
+
+       // $("#Temp").text("Temperature: " + temperature);
+       console.log(temperature)
+       $("#Temp").append(temperature);
+
+      // $("#Humidity").text("Humidity: " + humidity);
+      console.log(humidity)
+      $("#Humidity").append(humidity);
+
+      // $("Wind-Speed").text("Wind Speed: " + windSpeed);
+      console.log(windSpeed)
+      $("#Wind-Speed").append(windSpeed + " MPH");
+
+      // $("icon").text("icon: " + icon);
+      console.log(iconURL)
+      $("#icon").attr("src", iconURL);
+
+      //UV Index
+  
+      var lat = response.coord.lat
+      var lon = response.coord.lon
+    
+      console.log("lat and lon", lat,lon)
+      var queryURLUVI = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + lat + "&lon=" + lon;
+    
+      $.ajax ({
+        url: queryURLUVI,
+        method: "GET"
+      })
+      .then(function (response) {
+        console.log(response)
+        $("#UVIndex").append(response.value)
+
+        UVIndex = response.value
+        console.log (UVIndex)
+        
+        if (UVIndex < 2 ){
+          $("#UVIndex").addClass("low");
+        } else if (UVIndex >= 3 && UVIndex <=7 ){
+          $("#UVIndex").addClass("medium");
+        } else {
+          $("#UVIndex").addClass("high");
+        }
+      })
+    
+
+    citySearched = $("#cityName").val();
+    var queryURLForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearched + "&units=imperial&appid=" + APIKey;
+
+
+    // Performing our AJAX GET request
+    $.ajax({
+      url: queryURLForecast,
+      method: "GET"
+    })
+     // After the data comes back from the API
+    .then(function (response) {
+    
+    // Log the queryURL
+    console.log(queryURLForecast);
+
+    // Log the resulting object
+    console.log(response);
+
+    var Date = moment().format("L");
+    console.log(Date)
+
+    var Day1 = $("#forecastDate1")
+    var Day2 = $("#forecastDate2")
+    var Day3 = $("#forecastDate3")
+    var Day4 = $("#forecastDate4")
+    var Day5 = $("#forecastDate5")
+
+    day1 = Date
+
+    $("#forecastDate1").append(day1)
+    //ICON
+    var currentIcon = response.list[4].weather[0].icon;
+    var iconURL = "http://openweathermap.org/img/wn/" + currentIcon + "@2x.png"
+    var forecastTemp = response.list[4].main.temp
+    var forecastHumidity = response.list[4].main.humidity
+
+
+    console.log(iconURL)
+    console.log(currentIcon)
+      $("#forecastIcon1").attr("src", iconURL);
+
+    //Temp
+    console.log(forecastTemp)
+       $("#forecastTemp1").append(forecastTemp);
+
+   //Humidity
+    console.log(forecastHumidity)
+    $("#forecastHumidity1").append(forecastHumidity);
+
+
+
+  
+
+    var forecastDate = ("#forecastDate")
+
+//     for (let index = 0; index < response.list.length; index++){
+//         if (response.list[index].dt_txt === 15:00:00)
+//     }
+
+//   })
+// })
+    })
+    })
+ 
+
+
+function init () {
+  localStorage.getItem(cities)
+}
+
+function storeCities (){
+  localStorage.setItem ("cities", JSON.stringify(cities));
+}
+
+
+var cities = [];
+function cities () {
+  var storedCities = JSON.parse(localStorage.getItem(""))
+}
+
+
+})
+
+// function renderWeather() { 
+
+// }
+
+// // Create the  list group to contain the articles and add the article content for each
+// var prevCitiesSearched = $("<ul>");
+// prevCitiesSearched.addClass();
+
+
+
+// // Add the newly created element to the DOM
+// $("#prevSearch").append(prevCitiesSearched);
+
+
+//for (var i = 0; i < results.length; i++) {
+  //  var temperature = temperature.response.data //?
+   // var humidity = humidity.response.data //?
+    //var windSpeed = windSpeed.response.data //?
+   // var uvIndex = uvIndex.response.data //?
