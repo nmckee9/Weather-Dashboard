@@ -29,75 +29,73 @@
                     <div class="input-group-append">
                         <button type="button" class="btn btn-primary" id="button">Search</button>
                     </div>
-                    <ul class="list-group cityNames listItems" id="prevSearch">
-                    </ul>
+                    <div class="SearchedCities">
+                        <ul class="list-group cityNames listItems" id="prevSearch">
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="div col-sm-8">
                 <div class="card cityInfo" style="width: 800px;">
-                    <div class="card-body citydata">
+                    <div class="card-body flex citydata">
                         <h5 class="card-title" id="CityName"></h5>
                         <img class="card-subtitle mb-2 text-muted" id="icon"><br>
                         <h6 class="card-subtitle mb-2 text-muted" id="Temp">Temperature: </h6> <br>
                         <h6 class="card-subtitle mb-2 text-muted" id="Humidity">Humidity: </h6> <br>
                         <h6 class="card-subtitle mb-2 text-muted" id="Wind-Speed">Wind Speed: </h6> <br>
-                        <h6 class="card-subtitle mb-2 text-muted" >UV Index:
-                            <span id="UVIndex"></span> 
+                        <h6 class="card-subtitle mb-2 text-muted">UV Index:
+                            <span id="UVIndex"></span>
                         </h6> <br>
-                        
+
                     </div>
                 </div>
-                <div class="card cityInfo" style="width: 800px; height: 260px;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="">5 Day Forecast</h5> <br>
-                        <div class="div row futureBox">
-                            <div class="div col-sm-2">
-                                <div class="futureForecastBox" id="futureDay-1">
-                                    <p id="forecastDate1"></p>
-                                    <img id="forecastIcon1">
-                                    <p id="forecastTemp1">Temp: </p>
-                                    <p id="forecastHumidity1">Humidity: </p>
-                                </div>
+                <div class="div row" style="margin-top: 20px; margin-left: 20px;">
+                    <h5>5 Day Forecast</h5> <br>
+                </div>
+                <div class="card" style="width: 800px;">
+                    <div class="card-deck fit cityData">
+                        <div class="card">
+                            <div class="card-body cardStyle">
+                                <h6 class="card-title forecastDate"></h6>
+                                <img class="forecastIcon">
+                                <p class="forecastTemp"></p>
+                                <p class="forecastHumidity"></p>
                             </div>
-                            <div class="div col-sm-2 bluebox">
-                                <div class="futureForecastBox" id="futureDay-2">
-                                    <p id="forecastDate2"></p>
-                                    <p id="forecastIcon2">Icon</p>
-                                    <p id="forecastTemp">Temp</p>
-                                    <p id="forecastHumidity">Humidity</p>
-                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body cardStyle">
+                                <h6 class="card-title forecastDate"></h6>
+                                <img class="forecastIcon">
+                                <p class="forecastTemp"></p>
+                                <p class="forecastHumidity"></p>
                             </div>
-                            <div class="div col-sm-2">
-                                <div class="futureForecastBox" id="futureDay-3">
-                                    <p id="forecastDate3"></p>
-                                    <img  id="forecastIcon">Icon
-                                    <p id="forecastTemp">Temp</p>
-                                    <p id="forecastHumidity">Humidity</p>
-                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body cardStyle">
+                                <h6 class="card-title forecastDate"></h6>
+                                <img class="forecastIcon">
+                                <p class="forecastTemp"></p>
+                                <p class="forecastHumidity"></p>
                             </div>
-                            <div class="div col-sm-2">
-                                <div class="futureForecastBox"id="futureDay-4">
-                                    <p id="forecastDate4"></p>
-                                    <p id="forecastIcon">Icon</p>
-                                    <p id="forecastTemp">Temp</p>
-                                    <p id="forecastHumidity">Humidity</p>
-                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body cardStyle">
+                                <h6 class="card-title forecastDate"></h6>
+                                <img class="forecastIcon">
+                                <p class="forecastTemp"></p>
+                                <p class="forecastHumidity"></p>
                             </div>
-                            <div class="div col-sm-2">
-                                <div class="futureForecastBox" id="futureDay-5">
-                                    <p id="forecastDate5"></p>
-                                    <p id="forecastIcon">Icon</p>
-                                    <p id="forecastTemp">Temp</p>
-                                    <p id="forecastHumidity">Humidity</p>
-                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body cardStyle">
+                                <h6 class="card-title forecastDate"></h6>
+                                <img class="forecastIcon">
+                                <p class="forecastTemp"></p>
+                                <p class="forecastHumidity"></p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
 
             </div>
 

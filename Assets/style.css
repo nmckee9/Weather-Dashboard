@@ -4,12 +4,13 @@
 
 .searchCol {
 background-color: lightgrey;
-height: 600px;
+height: 725px;
 margin-left: -100px;
 }
 
 .citydata{
-    height: 800px;
+    height: 1400px;
+    background-color: lightblue;
 }
 
 .cityNames {
@@ -22,33 +23,22 @@ margin-left: -100px;
 }
 
 .cityInfo {
-    height: 300px;
+  height: 350px;
     margin-top: 20px;
 }
-
-.futureWeather {
-    height: 266px;
-    margin-top: 15px;
+.cityInfo2 {
+    height: 500px;
 }
 
-.futureBox {
-    margin-left: 20px;
-}
-.blueBox {
-    padding: 10px;
-}
 
-.futureForecastBox {
-    width: 175px;
-    height: 150px;
-    background-color: #007bff;
-    text-align: center;
-    color: cornsilk;
-}
 
 #forecastIcon1 {
     height: 40px;
     width: 40px;
+}
+
+.cardStyle {
+    background-color: lightblue;
 }
 
 .low {
