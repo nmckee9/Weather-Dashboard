@@ -1,13 +1,3 @@
-//local Storage
-//json link
-//not slim version of bootstrap so it includes ajax
-//on click events for search button
-//append ajax info to div for displaying weather info
-//if statements for UV index
-//get info for 5 day forecast and append info to future weather div 
-//need to display last city searched for in ul and prepend
-//so I'll need to take out cities listed as hard code and dynamically add via js
-
 var APIKey = "66a5b909d490ec3c9ab231a86676904b"
 
 
@@ -23,7 +13,6 @@ $("button").on("click", function () {
   var citySearched = $("#cityName").val().split(" ").join("+");
   var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearched + "&units=imperial&appid=" + APIKey;
   console.log(queryURLCurrent)
-
   // Performing our AJAX GET request
   $.ajax({
     url: queryURLCurrent,
@@ -31,7 +20,7 @@ $("button").on("click", function () {
   })
     // After the data comes back from the API
     .then(function (response) {
-      $("#cityName").val("");
+      $("#cityName").val("")
 
       // Log the queryURL
       console.log(queryURLCurrent);
@@ -189,9 +178,10 @@ $("button").on("click", function () {
     //onclick event triggers function 
   }
   getStoredCities()
-  
  
 })
+
+
 
 
 

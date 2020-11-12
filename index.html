@@ -12,92 +12,93 @@
 
 </head>
 
-<body>
-    <div class="nav navbar navbar-dark bg-dark">
+<body class="bg">
+    <div class="nav navbar navbar-dark bg-dark justify-content-center">
         <h1 class="navbar-text weatherNav">
             Weather Dashboard
         </h1>
     </div>
 
     <div class="div container">
-        <div class="div row">
-            <div class="div col-sm-4 searchCol">
-                <label for="search-bar" style="margin-left: 10px;">Search for a City</label>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="city, state" id="cityName"
-                        aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button type="button" class="btn btn-primary" id="button">Search</button>
+        <div class="div row search-row justify-content-center">
+            <form class="form-inline">
+                <div class="form-group mb-2">
+                    <input type="text" class="form-control" placeholder="search for a city" id="cityName"
+                        aria-label="Search" aria-describedby="basic-addon2">
+                </div>
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-secondary outline mb-2" id="button">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="SearchedCities">
+            <ul class="list-group cityNames listItems" id="prevSearch">
+            </ul>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card cityInfo" style="width: 800px;">
+                <div class="card-body flex citydata">
+                    <h5 class="card-title" id="CityName"></h5>
+                    <img class="card-subtitle mb-2 text-muted" id="icon"><br>
+                    <h6 class="card-subtitle mb-2 text-muted" id="Temp">Temperature: </h6> <br>
+                    <h6 class="card-subtitle mb-2 text-muted" id="Humidity">Humidity: </h6> <br>
+                    <h6 class="card-subtitle mb-2 text-muted" id="Wind-Speed">Wind Speed: </h6> <br>
+                    <h6 class="card-subtitle mb-2 text-muted">UV Index:
+                        <span id="UVIndex"></span>
+                    </h6> <br>
+                </div>
+            </div>
+        </div>
+        <div class="div row justify-content-center" style="margin-top: 20px; margin-left: 20px;">
+            <h5>5 Day Forecast</h5> <br>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card bg" style="width: 800px;">
+                <div class="card-deck fit cityData">
+                    <div class="card">
+                        <div class="card-body cardStyle">
+                            <h6 class="card-title forecastDate"></h6>
+                            <img class="forecastIcon">
+                            <p class="forecastTemp"></p>
+                            <p class="forecastHumidity"></p>
+                        </div>
                     </div>
-                    <div class="SearchedCities">
-                        <ul class="list-group cityNames listItems" id="prevSearch">
-                        </ul>
+                    <div class="card">
+                        <div class="card-body cardStyle">
+                            <h6 class="card-title forecastDate"></h6>
+                            <img class="forecastIcon">
+                            <p class="forecastTemp"></p>
+                            <p class="forecastHumidity"></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body cardStyle">
+                            <h6 class="card-title forecastDate"></h6>
+                            <img class="forecastIcon">
+                            <p class="forecastTemp"></p>
+                            <p class="forecastHumidity"></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body cardStyle">
+                            <h6 class="card-title forecastDate"></h6>
+                            <img class="forecastIcon">
+                            <p class="forecastTemp"></p>
+                            <p class="forecastHumidity"></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body cardStyle">
+                            <h6 class="card-title forecastDate"></h6>
+                            <img class="forecastIcon">
+                            <p class="forecastTemp"></p>
+                            <p class="forecastHumidity"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="div col-sm-8">
-                <div class="card cityInfo" style="width: 800px;">
-                    <div class="card-body flex citydata">
-                        <h5 class="card-title" id="CityName"></h5>
-                        <img class="card-subtitle mb-2 text-muted" id="icon"><br>
-                        <h6 class="card-subtitle mb-2 text-muted" id="Temp">Temperature: </h6> <br>
-                        <h6 class="card-subtitle mb-2 text-muted" id="Humidity">Humidity: </h6> <br>
-                        <h6 class="card-subtitle mb-2 text-muted" id="Wind-Speed">Wind Speed: </h6> <br>
-                        <h6 class="card-subtitle mb-2 text-muted">UV Index:
-                            <span id="UVIndex"></span>
-                        </h6> <br>
-
-                    </div>
-                </div>
-                <div class="div row" style="margin-top: 20px; margin-left: 20px;">
-                    <h5>5 Day Forecast</h5> <br>
-                </div>
-                <div class="card" style="width: 800px;">
-                    <div class="card-deck fit cityData">
-                        <div class="card">
-                            <div class="card-body cardStyle">
-                                <h6 class="card-title forecastDate"></h6>
-                                <img class="forecastIcon">
-                                <p class="forecastTemp"></p>
-                                <p class="forecastHumidity"></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body cardStyle">
-                                <h6 class="card-title forecastDate"></h6>
-                                <img class="forecastIcon">
-                                <p class="forecastTemp"></p>
-                                <p class="forecastHumidity"></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body cardStyle">
-                                <h6 class="card-title forecastDate"></h6>
-                                <img class="forecastIcon">
-                                <p class="forecastTemp"></p>
-                                <p class="forecastHumidity"></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body cardStyle">
-                                <h6 class="card-title forecastDate"></h6>
-                                <img class="forecastIcon">
-                                <p class="forecastTemp"></p>
-                                <p class="forecastHumidity"></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body cardStyle">
-                                <h6 class="card-title forecastDate"></h6>
-                                <img class="forecastIcon">
-                                <p class="forecastTemp"></p>
-                                <p class="forecastHumidity"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        </div>
 
 
 
@@ -106,17 +107,20 @@
 
 
 
-            <!-- jQuery JS -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                crossorigin="anonymous"></script>
-            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-            <script src="Assets/moment.js"></script>
-            <script src="Assets/script.js"></script>
+
+
+        <!-- jQuery JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="Assets/moment.js"></script>
+        <script src="Assets/script.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,16 @@
+.bg{
+    background-color: #343a40
+}
+
+.navbar-text{
+    color: lightblue;
+}
+
 .weatherNav {
+    text-align: center;
+}
+
+.search-row{
     text-align: center;
 }
 
